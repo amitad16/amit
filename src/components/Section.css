@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter:400,700");
+
+section.heading {
+  text-align: center;
+  padding: 120px 24px 230px;
+}
+
+section.landing {
+  /* height: calc(100vh - 140px); */
+}
+
+section.desc {
+  height: 500px;
+  /* width: 1000px; */
+  margin: auto;
+  margin-top: -130px;
+}
+
+.know-more {
+  margin: -40px auto 40px;
+}

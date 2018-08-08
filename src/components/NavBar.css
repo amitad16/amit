@@ -1,0 +1,15 @@
+.navbar {
+  padding: 1.2rem 0;
+  box-shadow: none;
+  z-index: auto;
+}
+
+.navbar > .container {
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  .navbar > .container {
+    padding: 0 16px;
+  }
+}
