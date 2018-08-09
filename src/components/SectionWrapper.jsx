@@ -1,5 +1,6 @@
 import React from "react";
 
+import NavBar from "./NavBar";
 import Section from "./Section";
 
 class SectionWrapper extends React.Component {
@@ -8,9 +9,11 @@ class SectionWrapper extends React.Component {
 
     for (let i = 1; i <= wrapper.childElementCount; ++i) {
       if (i % 2 !== 0) {
-        wrapper.children[i - 1].children[0].className += " " + "bg-violet";
+        wrapper.children[i - 1].children[0].className +=
+          " " + "bg-white text-black";
       } else {
-        wrapper.children[i - 1].children[0].className += " " + "bg-white";
+        wrapper.children[i - 1].children[0].className +=
+          " " + "bg-violet text-white";
       }
     }
   }
@@ -18,9 +21,7 @@ class SectionWrapper extends React.Component {
   render() {
     return (
       <div className="section-wrapper">
-        <Section type="landing" />
         <Section />
-
         <Section />
       </div>
     );

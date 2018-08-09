@@ -3,7 +3,7 @@ import React from "react";
 import "./SectionHead.css";
 
 class SectionHead extends React.Component {
-  state = { classSectionHeading: ["section-heading"] };
+  state = { sectionHeadingClass: [], sectionSubHeadingClass: [] };
 
   componentDidMount() {
     this.setResizedClasses();
@@ -13,25 +13,48 @@ class SectionHead extends React.Component {
   }
 
   setResizedClasses = () => {
-    let classSectionHeadingTemp = ["landing section-heading"];
+    let sectionHeadingClassTemp =
+      this.props.type === "landing"
+        ? ["landing section-heading"]
+        : ["section-heading"];
+    let sectionSubHeadingClassTemp = ["landing section-subheading text-grey"];
     if (window.innerWidth > 1200) {
-      if (classSectionHeadingTemp.indexOf("em3") === -1) {
-        classSectionHeadingTemp.push("em3");
+      if (
+        sectionHeadingClassTemp.indexOf("em3") === -1 &&
+        sectionSubHeadingClassTemp.indexOf("em1_5") === -1
+      ) {
+        sectionHeadingClassTemp.push("em3");
+        sectionSubHeadingClassTemp.push("em1_5");
       }
     } else if (window.innerWidth > 992) {
-      if (classSectionHeadingTemp.indexOf("em2_5") === -1) {
-        classSectionHeadingTemp.push("em2_5");
+      if (
+        sectionHeadingClassTemp.indexOf("em2_5") === -1 &&
+        sectionSubHeadingClassTemp.indexOf("em1_5") === -1
+      ) {
+        sectionHeadingClassTemp.push("em2_5");
+        sectionSubHeadingClassTemp.push("em1_5");
       }
     } else if (window.innerWidth > 768) {
-      if (classSectionHeadingTemp.indexOf("em2") === -1) {
-        classSectionHeadingTemp.push("em2");
+      if (
+        sectionHeadingClassTemp.indexOf("em2") === -1 &&
+        sectionSubHeadingClassTemp.indexOf("em1_5") === -1
+      ) {
+        sectionHeadingClassTemp.push("em2");
+        sectionSubHeadingClassTemp.push("em1_5");
       }
     } else if (window.innerWidth <= 768) {
-      if (classSectionHeadingTemp.indexOf("em1_5") === -1) {
-        classSectionHeadingTemp.push("em1_5");
+      if (
+        sectionHeadingClassTemp.indexOf("em2") === -1 &&
+        sectionSubHeadingClassTemp.indexOf("em1_25") === -1
+      ) {
+        sectionHeadingClassTemp.push("em2");
+        sectionSubHeadingClassTemp.push("em1_25");
       }
     }
-    this.setState({ classSectionHeading: classSectionHeadingTemp });
+    this.setState({
+      sectionHeadingClass: sectionHeadingClassTemp,
+      sectionSubHeadingClass: sectionSubHeadingClassTemp
+    });
   };
 
   render() {
@@ -41,7 +64,7 @@ class SectionHead extends React.Component {
           <h1
             className={
               this.props.type === "landing"
-                ? this.state.classSectionHeading.join(" ") + " text-white"
+                ? this.state.sectionHeadingClass.join(" ") + " text-white"
                 : "section-heading em2"
             }
           >
@@ -50,7 +73,7 @@ class SectionHead extends React.Component {
           <p
             className={
               this.props.type === "landing"
-                ? "section-subheading text-grey em1_5"
+                ? this.state.sectionSubHeadingClass.join(" ") + " text-white"
                 : "section-subheading em1_25"
             }
           >
@@ -60,26 +83,9 @@ class SectionHead extends React.Component {
             <React.Fragment>
               <div className="col-12">
                 <img
-                  className="avatar"
+                  className="avatar img-fluid"
                   src="http://mattfarley.ca/img/mf-avatar.svg"
                 />
-              </div>
-              <div className="row">
-                <div className="col-4 social-links">
-                  <a href="#" className="button-circle fa fa-github mx-auto" />
-                </div>
-                <div className="col-4">
-                  <a
-                    href="#"
-                    className="button-circle fa fa-linkedin mx-auto"
-                  />
-                </div>
-                <div className="col-4">
-                  <a
-                    href="#"
-                    className="button-circle fa fa-envelope mx-auto"
-                  />
-                </div>
               </div>
             </React.Fragment>
           ) : (

@@ -14,19 +14,21 @@ class Section extends React.Component {
   }
 
   setLandingSectionHeight = () => {
-    if (window.innerHeight < 800) {
-      document.querySelector("section.landing").style.height = "660px";
+    if (window.innerWidth < 425) {
+      document.querySelector("section > .landing").style.padding = "64px 24px";
     }
-    if (window.innerHeight >= 800) {
-      document.querySelector("section.landing").style.height =
-        "calc(100vh - 140px)";
-    }
+    // if (window.innerHeight < 800) {
+    //   document.querySelector("section.landing").style.height = "660px";
+    // }
+    // if (window.innerHeight >= 800) {
+    // document.querySelector("section.landing").style.height = "85vh";
+    // }
   };
 
   render() {
     return (
-      <div>
-        <section
+      <section>
+        <div
           className={
             this.props.type === "landing" ? "landing heading" : "heading"
           }
@@ -36,17 +38,17 @@ class Section extends React.Component {
               type={this.props.type === "landing" ? "landing" : ""}
             />
           </div>
-        </section>
+        </div>
         {this.props.type === "landing" ? (
-          <div className="button-styled button-circle know-more">V</div>
+          ""
         ) : (
-          <section className="desc card box-shadow">
+          <div className="desc card box-shadow">
             <SectionDesc
               type={this.props.type === "landing" ? "landing" : ""}
             />
-          </section>
+          </div>
         )}
-      </div>
+      </section>
     );
   }
 }
