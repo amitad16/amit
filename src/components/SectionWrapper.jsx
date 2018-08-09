@@ -22,7 +22,7 @@ class SectionWrapper extends React.Component {
     return (
       <div className="section-wrapper">
         <Section />
-        <Section />
+        {/* <Section /> */}
       </div>
     );
   }

@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Bitter:400,700");
 
 .avatar {
-  padding: 32px 50px;
+  padding: 32px 80px;
   position: relative;
 }
 
-.fa {
+/* .fa {
   border: none;
   background-color: #8c43ff;
   color: #efefef;
@@ -18,7 +18,7 @@
   text-decoration: none;
   background-color: #efefef;
   color: #8c43ff;
-}
+} */
 
 .section-heading {
   margin-bottom: 1.5rem;
