@@ -27,7 +27,11 @@ class Section extends React.Component {
 
   render() {
     return (
-      <section>
+      <section
+        className={
+          this.props.type === "landing" ? "landing-section" : "section"
+        }
+      >
         <div
           className={
             this.props.type === "landing" ? "landing heading" : "heading"

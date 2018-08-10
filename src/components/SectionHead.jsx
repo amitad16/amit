@@ -51,6 +51,15 @@ class SectionHead extends React.Component {
         sectionSubHeadingClassTemp.push("em1_25");
       }
     }
+
+    if (window.innerWidth <= 768) {
+      document.querySelector(".avatar").style.width = "120px";
+      document.querySelector(".avatar").style.padding = "32px 0";
+    } else {
+      document.querySelector(".avatar").style.width = "";
+      document.querySelector(".avatar").style.padding = "32px 80px";
+    }
+
     this.setState({
       sectionHeadingClass: sectionHeadingClassTemp,
       sectionSubHeadingClass: sectionSubHeadingClassTemp

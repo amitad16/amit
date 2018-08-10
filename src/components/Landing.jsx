@@ -4,12 +4,8 @@ import NavBar from "./NavBar";
 import Section from "./Section";
 
 const Landing = () => {
-  let style = {
-    height: "100vh"
-  };
-
   return (
-    <header className="bg-violet text-white" style={style}>
+    <header className="bg-violet text-white">
       <NavBar />
       <Section type="landing" />
     </header>
