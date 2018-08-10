@@ -26,17 +26,14 @@ class Section extends React.Component {
   };
 
   render() {
+    let sectionClassName =
+      this.props.type === "landing" ? "landing-section" : "section";
+    let headingClassName =
+      this.props.type === "landing" ? "landing heading" : "heading";
+
     return (
-      <section
-        className={
-          this.props.type === "landing" ? "landing-section" : "section"
-        }
-      >
-        <div
-          className={
-            this.props.type === "landing" ? "landing heading" : "heading"
-          }
-        >
+      <section className={sectionClassName}>
+        <div className={headingClassName}>
           <div className="container">
             <SectionHead
               type={this.props.type === "landing" ? "landing" : ""}
@@ -46,7 +43,7 @@ class Section extends React.Component {
         {this.props.type === "landing" ? (
           ""
         ) : (
-          <div className="desc card box-shadow">
+          <div className="desc box-shadow">
             <SectionDesc
               type={this.props.type === "landing" ? "landing" : ""}
             />

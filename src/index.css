@@ -28,6 +28,16 @@
   line-height: 80px;
 }
 
+.card.custom-card {
+  border-radius: 20px;
+  border: 0;
+  -webkit-box-shadow: 1px 5px 20px rgba(140, 67, 255, 0.08);
+  -moz-box-shadow: 1px 5px 20px rgba(140, 67, 255, 0.08);
+  -ms-box-shadow: 1px 5px 20px rgba(140, 67, 255, 0.08);
+  -o-box-shadow: 1px 5px 20px rgba(140, 67, 255, 0.08);
+  box-shadow: 1px 5px 20px rgba(140, 67, 255, 0.08);
+}
+
 .text-white {
   color: #fff;
 }

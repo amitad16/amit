@@ -8,9 +8,35 @@ import PortfolioItemDesc from "./PortfolioItemDesc";
 const SectionDesc = () => {
   return (
     <React.Fragment>
-      <section className="bg-light" id="portfolio">
+      <section id="portfolio">
         <div className="container">
           <div className="row">
+            <PortfolioItem
+              href="#cheninblanc"
+              imgSrc="img/portfolio/Chenin Blanc.jpg"
+              alt="Chenin Blanc"
+              muted="Logo Design"
+            />
+
+            <PortfolioItem
+              href="#thecircularsquare"
+              imgSrc="img/portfolio/The Circular Square.jpg"
+              alt="The Circular Square"
+              muted="Logo Design"
+            />
+            <PortfolioItem
+              href="#cheninblanc"
+              imgSrc="img/portfolio/Chenin Blanc.jpg"
+              alt="Chenin Blanc"
+              muted="Logo Design"
+            />
+
+            <PortfolioItem
+              href="#thecircularsquare"
+              imgSrc="img/portfolio/The Circular Square.jpg"
+              alt="The Circular Square"
+              muted="Logo Design"
+            />
             <PortfolioItem
               href="#cheninblanc"
               imgSrc="img/portfolio/Chenin Blanc.jpg"
