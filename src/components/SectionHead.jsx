@@ -70,32 +70,39 @@ class SectionHead extends React.Component {
     return (
       <div className="row">
         <div className="mx-auto">
-          <h1
-            className={
-              this.props.type === "landing"
-                ? this.state.sectionHeadingClass.join(" ") + " text-white"
-                : "section-heading em2"
-            }
-          >
-            Hi, I’m Amit. Nice to meet you.
-          </h1>
-          <p
-            className={
-              this.props.type === "landing"
-                ? this.state.sectionSubHeadingClass.join(" ") + " text-white"
-                : "section-subheading em1_25"
-            }
-          >
-            This is some description
-          </p>
           {this.props.type === "landing" ? (
             <React.Fragment>
+              <h1
+                className={
+                  this.state.sectionHeadingClass.join(" ") + " text-white"
+                }
+              >
+                Desingner &amp; Developer
+              </h1>
+              <p
+                className={
+                  this.state.sectionSubHeadingClass.join(" ") + " text-white"
+                }
+              >
+                This is some description
+              </p>
               <div className="col-12">
                 <img
                   className="avatar img-fluid"
                   src="http://mattfarley.ca/img/mf-avatar.svg"
+                  alt="Amit Dimri"
                 />
               </div>
+            </React.Fragment>
+          ) : this.props.type === "skills" ? (
+            <React.Fragment>
+              <h1 className={"section-heading em2"}>Skills</h1>
+              <p className={"section-subheading em1_25"}>skill desc</p>
+            </React.Fragment>
+          ) : this.props.type === "portfolio" ? (
+            <React.Fragment>
+              <h1 className={"section-heading em2"}>Portfolio</h1>
+              <p className={"section-subheading em1_25"}>p desc</p>
             </React.Fragment>
           ) : (
             ""

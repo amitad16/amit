@@ -5,30 +5,15 @@
   position: relative;
 }
 
-/* .fa {
-  border: none;
-  background-color: #8c43ff;
-  color: #efefef;
-  font-size: 2.5em;
-  text-align: center;
-  text-decoration: none;
-}
-
-.fa:hover {
-  text-decoration: none;
-  background-color: #efefef;
-  color: #8c43ff;
-} */
-
 .section-heading {
   margin-bottom: 1.5rem;
   font-weight: 700;
   line-height: 1.125;
-  font-family: "Bitter", serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .section-subheading {
   line-height: 1.5;
   font-weight: 400;
-  font-family: "Bitter", serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

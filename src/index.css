@@ -50,8 +50,12 @@
   color: #000;
 }
 
+.text-visible-grey {
+  color: #6c757d;
+}
+
 .text-darkgrey {
-  color: #0a0a0a;
+  color: #293347;
 }
 
 .text-violet {

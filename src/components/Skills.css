@@ -1,0 +1,37 @@
+.skill-wrapper {
+  border-radius: 20px;
+  border: 1px solid rgba(140, 67, 255, 0.08);
+  -webkit-box-shadow: 1px 3px 20px rgba(140, 67, 255, 0.08);
+  -ms-box-shadow: 1px 3px 20px rgba(140, 67, 255, 0.08);
+  -o-box-shadow: 1px 3px 20px rgba(140, 67, 255, 0.08);
+  box-shadow: 1px 3px 20px rgba(140, 67, 255, 0.08);
+}
+
+.col-md-4.skill {
+  padding: 32px 0;
+}
+
+.col-md-4.skill:nth-child(2) {
+  border-left: 1px solid rgba(140, 67, 255, 0.08);
+  border-right: 1px solid rgba(140, 67, 255, 0.08);
+}
+
+span.icon {
+  display: block;
+  margin: 1em;
+}
+
+h4.skill-heading {
+  margin: 1.5em 0;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+ul.skill-desc {
+  list-style: none;
+  line-height: 40px;
+}
+
+ul.skill-desc > li {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

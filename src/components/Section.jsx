@@ -17,12 +17,6 @@ class Section extends React.Component {
     if (window.innerWidth < 425) {
       document.querySelector("section > .landing").style.padding = "64px 24px";
     }
-    // if (window.innerHeight < 800) {
-    //   document.querySelector("section.landing").style.height = "660px";
-    // }
-    // if (window.innerHeight >= 800) {
-    // document.querySelector("section.landing").style.height = "85vh";
-    // }
   };
 
   render() {
@@ -36,7 +30,15 @@ class Section extends React.Component {
         <div className={headingClassName}>
           <div className="container">
             <SectionHead
-              type={this.props.type === "landing" ? "landing" : ""}
+              type={
+                this.props.type === "landing"
+                  ? "landing"
+                  : this.props.type === "skills"
+                    ? "skills"
+                    : this.props.type === "portfolio"
+                      ? "portfolio"
+                      : ""
+              }
             />
           </div>
         </div>
@@ -44,9 +46,7 @@ class Section extends React.Component {
           ""
         ) : (
           <div className="desc box-shadow">
-            <SectionDesc
-              type={this.props.type === "landing" ? "landing" : ""}
-            />
+            <SectionDesc type={this.props.type} />
           </div>
         )}
       </section>
