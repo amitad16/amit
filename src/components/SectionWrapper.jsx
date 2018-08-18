@@ -21,6 +21,7 @@ class SectionWrapper extends React.Component {
       <div className="section-wrapper">
         <Section type="skills" />
         <Section type="portfolio" />
+        <Section type="contact" />
       </div>
     );
   }

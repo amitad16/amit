@@ -104,6 +104,11 @@ class SectionHead extends React.Component {
               <h1 className={"section-heading em2"}>Portfolio</h1>
               <p className={"section-subheading em1_25"}>p desc</p>
             </React.Fragment>
+          ) : this.props.type === "contact" ? (
+            <React.Fragment>
+              <h1 className={"section-heading em2"}>Contact</h1>
+              <p className={"section-subheading em1_25"}>p contact</p>
+            </React.Fragment>
           ) : (
             ""
           )}

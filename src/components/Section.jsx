@@ -37,7 +37,9 @@ class Section extends React.Component {
                     ? "skills"
                     : this.props.type === "portfolio"
                       ? "portfolio"
-                      : ""
+                      : this.props.type === "contact"
+                        ? "contact"
+                        : ""
               }
             />
           </div>

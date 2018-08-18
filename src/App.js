@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 
 import Landing from "./components/Landing";
 import SectionWrapper from "./components/SectionWrapper";
+import Footer from "./components/Footer";
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="App">
         <Landing />
         <SectionWrapper />
+        <Footer />
       </div>
     );
   }

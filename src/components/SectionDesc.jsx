@@ -4,6 +4,7 @@ import "./SectionDesc.css";
 
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
+import Contact from "./Contact";
 
 const SectionDesc = props => {
   return (
@@ -12,6 +13,8 @@ const SectionDesc = props => {
         <Skills />
       ) : props.type === "portfolio" ? (
         <Portfolio />
+      ) : props.type === "contact" ? (
+        <Contact />
       ) : (
         ""
       )}

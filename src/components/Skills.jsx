@@ -9,7 +9,16 @@ const Skills = () => {
     {
       name: "Web Development",
       icon: "fa fa-server fa-4x text-violet",
-      desc: ["React", "NodeJs", "JavaScript", "Jquery", "AJAX", "HTML", "CSS"]
+      desc: [
+        "React",
+        "NodeJs",
+        "JavaScript",
+        "MongoDB",
+        "Jquery",
+        "AJAX",
+        "HTML",
+        "CSS"
+      ]
     },
     {
       name: "Designing",
@@ -29,7 +38,7 @@ const Skills = () => {
     <React.Fragment>
       <section id="skills">
         <div className="container">
-          <div className="row text-center skill-wrapper">
+          <div className="row col-sm-12 text-center skill-wrapper">
             {skillType.map(v => (
               <SkillType
                 key={v.name}
